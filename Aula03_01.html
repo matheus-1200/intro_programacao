@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logica de programação</title>
+  </head>
+  <body>
+    <h1>Lógica de programação com javascript</h1>
+  </body>
+
+  <script>
+    var n = prompt('Digite um número: ')
+    n = parseFloat(n)
+
+    var indice = 1
+    while (indice <= 100) {
+      document.write(n + ' x ' + indice + ' = ' + n * indice + '<br>')
+      indice++
+    }
+    //logo após executar o primeiro while, indice vai ser 101, portanto chega como 101 no próximo loop, porém ele executa, pois o do while faz a primeira iteração e depois verifica
+    do {
+      document.write(n + ' x ' + indice + ' = ' + n * indice + '<br>')
+      indice++
+    } while (indice <= 100)
+
+    for (var i = 1; i <= 100; i++) {
+      document.write(n + ' x ' + i + ' = ' + n * i + '<br>')
+    }
+    document.write('saiu do loop')
+  </script>
+</html>

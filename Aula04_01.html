@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logica de programação</title>
+  </head>
+  <body>
+    <h1>Lógica de programação com javascript</h1>
+    <div id="output"></div>
+
+    <script>
+      var output = document.querySelector('#output') // atribui a div com id output a variável output
+
+      var mensagem = ' '
+      for (var i = 1; i < 1001; i++) {
+        mensagem = mensagem + 'i: ' + i + '<br>'
+      }
+
+      output.innerHTML = mensagem //atribui o conteudo da variavel mensagem a div referente a variável output
+    </script>
+  </body>
+</html>
