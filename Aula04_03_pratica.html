@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logica de programação</title>
+  </head>
+  <body>
+    <h1>Lógica de programação com javascript</h1>
+    <button onclick="escolherOpr('+')">+</button>
+    <button onclick="escolherOpr('-')">-</button>
+    <button onclick="escolherOpr('/')">/</button>
+    <button onclick="escolherOpr('*')">X</button>
+    <div id="output"></div>
+
+    <script>
+      var numero1 = parseFloat(prompt('Digite um número: '))
+      var output = document.querySelector('#output')
+      output.innerHTML = numero1
+
+      function escolherOpr(simbolo) {
+        var number1 = parseFloat(document.querySelector('#output').textContent)
+        var number2 = parseFloat(prompt('Digite outro número: '))
+
+        var calculo = calcular(simbolo, number1, number2)
+
+        document.querySelector('#output').innerHTML = calculo
+      }
+
+      function calcular(operacao, n1, n2) {
+        var valor = null
+
+        switch (operacao) {
+          case '+':
+            valor = n1 + n2
+            break
+
+          case '-':
+            valor = n1 - n2
+            break
+
+          case '*':
+            valor = n1 * n2
+            break
+
+          case '/':
+            valor = n1 / n2
+            break
+        }
+        return valor
+      }
+    </script>
+  </body>
+</html>
